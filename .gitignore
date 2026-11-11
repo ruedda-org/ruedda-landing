@@ -7,6 +7,10 @@
 !CNAME
 # imagen de vista previa al compartir el link
 !og.png
+# SEO: ícono que muestra Google, reglas para buscadores y mapa del sitio
+!favicon.png
+!robots.txt
+!sitemap.xml
 # el deck de inversionistas, en su propia ruta
 !pitch-deck/
 !pitch-deck/index.html
