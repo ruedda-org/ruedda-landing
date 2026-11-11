@@ -130,6 +130,12 @@ ul,ol{margin:0; padding:0; list-style:none}
 .sec-head{display:flex; flex-direction:column; gap:var(--sm); margin-bottom:var(--lg)}
 .sec-head h2{font-size:var(--t-heading); line-height:1.05; letter-spacing:-.02em}
 .sec-head p{color:var(--ink-soft); font-size:var(--t-lead); max-width:52ch}
+/* Antetítulo: la píldora de .pill-ok en naranja, encima del h2 */
+.sec-head .antetitulo{
+  align-self:flex-start; padding:6px 12px; border-radius:var(--r-btn);
+  background:var(--primary-soft); color:var(--primary-deep);
+  font-family:var(--fd); font-weight:600; font-size:.8125rem; letter-spacing:.02em;
+}
 
 /* wordmark: siempre imagen, nunca texto */
 .wm{display:inline-block; height:1em; width:auto; vertical-align:-.08em}
@@ -275,6 +281,9 @@ ul,ol{margin:0; padding:0; list-style:none}
 
 /* ---------- preguntas (FAQList del app) ---------- */
 /* ---------- alta de concesionarios: el único formulario de la página ---------- */
+/* En teléfono el header fijo (73px) es más alto que el padding de la sección
+   (64px) y taparía el antetítulo al llegar desde el botón del header. */
+#concesionarios{scroll-margin-top:40px}
 .alta-caja{max-width:880px}
 .alta{padding:var(--md); display:grid; gap:var(--sm)}
 @media(min-width:768px){ .alta{grid-template-columns:repeat(2,minmax(0,1fr)); column-gap:var(--md)} .alta .ancho{grid-column:1/-1} }
@@ -482,8 +491,9 @@ ul,ol{margin:0; padding:0; list-style:none}
          #solicitud-enviada o #solicitud-error. Los nombres de campo son el
          contrato con el backend. Textos en CONTENT.md. -->
     <div class="sec-head rise">
-      <h2>Súmate como concesionario</h2>
-      <p>Llena el formulario y nosotros te contactamos para validar tus datos y pedirte algún documento.</p>
+      <p class="antetitulo">Vende con nosotros</p>
+      <h2>Suma tu concesionario al impulso de <img class="wm" src="assets/wordmark.png" alt="RUEDDA" width="1200" height="261"></h2>
+      <p>Completa el formulario y nuestro equipo te contactará para validar tus datos y acompañarte en los siguientes pasos.</p>
     </div>
     <div class="alta-caja">
       <p id="solicitud-enviada" class="aviso card" role="status">Recibimos tu solicitud. Te vamos a contactar para validar tus datos.</p>
